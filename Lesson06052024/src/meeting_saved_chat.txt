@@ -1,0 +1,119 @@
+09:40:39 From Starta Institute 36 to Everyone:
+	https://github.com/tel-ran-de/200224-m
+10:32:21 From Starta Institute 36 to Everyone:
+	//Создайте пакет main
+	//Создайте класс Main и метод main
+	//Создайте новый пакет task
+	//Создайте класс Test
+	//Создайте переменную с модификатором public
+	//Создайте внутри пакета task подпакет sub_task
+	//Создайте в пакете sub_task класс SubTest
+	//Создайте переменную с модификатором private
+	//Создайте экземпляры классов Test и SubTest в классе Main
+	//Попробуйте изменить модификаторы классов и переменных
+	//Проанализируйте написанный код
+10:39:11 From Вадим to Everyone:
+	амар выключи микрофон
+10:53:49 From Starta Institute 36 to Everyone:
+	Создайте класс Zoo
+	Создайте внутренний класс Monkey
+	Внутри Monkey создайте класс Banana
+	Создайте поле String sort = “Yellow”
+	Создайте метод getSort();
+	Создайте класс Test
+	Создайте экземпляр Zoo
+	Попробуйте распечатать сорт банана.
+	Проанализируйте написанный код
+11:07:04 From Вадим to Everyone:
+	пауза
+11:07:07 From Natalia Kolchenko to Everyone:
+	public class Zoo {
+	
+	    public String getSsort () {
+	        Monkey mon = new Monkey();
+	        return mon.getGetSort();
+	    }
+	
+	    public class Monkey {
+	
+	        public String getGetSort () {
+	            Banana banan = new Banana();
+	            return banan.getSort();
+	        }
+	
+	        public class Banana {
+	
+	            private String sort = "yellow";
+	
+	            public String getSort () {
+	                return this.sort;
+	            }
+	
+	
+	
+	        }
+	    }
+	}
+11:07:15 From Natalia Kolchenko to Everyone:
+	public class Test {
+	
+	    public static void main(String[] args) {
+	
+	        Zoo zoo = new Zoo();
+	        System.out.println(zoo.getSsort());
+	    }
+	}
+11:26:34 From Starta Institute 36 to Everyone:
+	public String getData() {
+	    class SomeInnerLocalClass {
+	        private String data = "Local class";
+	        
+	        public String getData() {
+	            return this.data;
+	        }
+	    }
+	    
+	    SomeInnerLocalClass someInnerLocalClass = new SomeInnerLocalClass();
+	    
+	    return someInnerLocalClass.getData();
+	}
+11:33:59 From Starta Institute 36 to Everyone:
+	Создайте любой объект из жизни
+	Наделите его свойствами (полями)
+	Определите поведение объекта
+	
+	Например: 
+	объект Собака, по имени “Шарик”, умеет лаять
+11:40:16 From Nina Janeckova to Starta Institute 36(Direct Message):
+	public class Cat {	    private String name;	    private int age;		    private String color;		    public Cat(String name, int age, String color) {	        this.name = name;	        this.age = age;	        this.color = color;	    }	    public String say(){	        return "Miau";	    }	}
+11:40:26 From Nina Janeckova to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        Cat cat = new Cat("Murka",5,"grey");	        System.out.println(cat.say());	    }
+11:40:52 From Anatolii Hololobov to Starta Institute 36(Direct Message):
+	public class Sony {	    private String name;	    public Sony(String name) {	        this.name = name;	    }	    public void Entertain() {	        System.out.println(name + " развлекает");	    }		    public static void main(String[] args) {	        Sony ployka = new Sony ("Плойка");	        ployka.Entertain();	    }	}
+11:41:18 From Dmytro Korol to Starta Institute 36(Direct Message):
+	package com.telran.lessons.lesson15;		package com.telran.lessons.lesson15;		public class Dog {	    	    private String name;		    	    public Dog(String name) {	        this.name = name;	    }		    	    public void bark() {	        System.out.println(name + " says: гав-гав");	    }	}		public class Main {	    public static void main(String[] args) {	        	        Dog myDog = new Dog("Шарик");		        	        myDog.bark();	    }	}
+11:45:43 From Oleksandr Drahin to Starta Institute 36(Direct Message):
+	public class Car {		    private String name;	    private int yearOfProduction;	    private String color;		    public Car(String name, int yearOfProduction, String color) {	        this.name = name;	        this.yearOfProduction = yearOfProduction;	        this.color = color;	    }		    public String getName() {	        return name;	    }		    public int getYearOfProduction() {	        return yearOfProduction;	    }		    public String getColor() {	        return color;	    }		    public void start(){	        System.out.println("Car " + this.getName() + " started.");	    }		    public void stop(){	        System.out.println("Car " + this.getName() + " stopped.");	    }	}
+11:46:23 From maxschneider to Starta Institute 36(Direct Message):
+	public class Dog {
+	
+	    public int legs;
+	   public String name;
+	   public String color;
+	
+	   public void run(){
+	       System.out.println("Der Hund kann laufen");
+	   }
+	
+	    public Dog(int legs, String name, String color) {
+	        this.legs = legs;
+	        this.name = name;
+	        this.color = color;
+	    }
+	
+	    public static void main(String[] args) {
+	        Dog dog = new Dog(4,"Sharik","Black");
+	        dog.run();
+	        
+	    }
+	}
