@@ -1,0 +1,352 @@
+09:52:48 From Starta Institute 36 to Everyone:
+	//        int[] arr;
+	//        arr = new int[10];
+	//        for(int i = 0; i < arr.length; i++) {
+	//            System.out.print(arr[i] + " ");
+	//        }
+	        //array initialization
+	//        1
+	        int[] arr = {1, 2, 3, 4, 5};
+	        for(int i = 0; i < arr.length; i++) {
+	            System.out.print(arr[i] + " ");
+	        }
+	        System.out.println();
+	        // 2
+	        int[] arr1 = new int[5];
+	        for(int i = 0; i < arr1.length; i++) {
+	            arr1[i] = i*2;
+	        }
+	        for(int i = 0; i < arr.length; i++) {
+	            System.out.print(arr1[i] + " ");
+	        }
+10:00:45 From Starta Institute 36 to Everyone:
+	for(int i = 0; i < arr1.length; i++) {
+	    arr1[i] = i*2;
+	    System.out.print(arr1[i] + " ");
+	}
+10:00:57 From Starta Institute 36 to Everyone:
+	//        int[] arr;
+	//        arr = new int[10];
+	//        for(int i = 0; i < arr.length; i++) {
+	//            System.out.print(arr[i] + " ");
+	//        }
+	        //array initialization
+	//        1
+	        int[] arr = {1, 2, 3, 4, 5};
+	        for(int i = 0; i < arr.length; i++) {
+	            System.out.print(arr[i] + " ");
+	        }
+	        System.out.println();
+	        // 2
+	        int[] arr1 = new int[5];
+	        for(int i = 0; i < arr1.length; i++) {
+	            arr1[i] = i*2;
+	            System.out.print(arr1[i] + " ");
+	        }
+	
+	        for(int i = 0; i < arr.length; i++) {
+	            System.out.print(arr1[i] + " ");
+	        }
+10:09:41 From Starta Institute 36 to Everyone:
+	int[] arr1 = new int[5];
+	        for(int i = 0; i < arr1.length; i++) {
+	            arr1[i] = i*2;
+	//            System.out.print(arr1[i] + " ");
+	        }
+	//        System.out.println(arr1[arr1.length]);
+	//        arr1[arr1.length] = 10;
+	        int[] arr2 = new int[arr1.length * 2];
+	        System.out.println(arr2.length);
+	        for (int i = 0; i < arr1.length; i++) {
+	            arr2[i] = arr1[i];
+	        }
+10:09:48 From Starta Institute 36 to Everyone:
+	for(int i = 0; i < arr2.length; i++) {
+	    System.out.print(arr2[i] + " ");
+	}
+10:13:12 From Starta Institute 36 to Everyone:
+	Создайте массив L = 10
+	Инициализируйте массив числами от 1 до 10 используя способ литерала
+	Выведите на консоль элемент из второй ячейки
+	Выведите на консоль элемент из предпоследней ячейки
+	Распечатайте на консоль все элементы из ячеек массива
+	Используйте инструкцию .print()
+	Замените все элементы в данном массиве на значение “-1”
+	Распечатайте на консоль все элементы из ячеек массива
+	Используйте инструкцию .print()
+10:20:21 From Dmytro Korol to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	    int[] L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};		    System.out.println(L[1]);		    System.out.println(L[8]);		    for (int i = 0; i < L.length; i++) {	        System.out.print(L[i] + " ");	    }	    System.out.println();		    for (int i = 0; i < L.length; i++) {	        L[i] = -1;	    }		    for (int i = 0; i < L.length; i++) {	        System.out.print(L[i] + " ");
+10:20:40 From maxschneider to Starta Institute 36(Direct Message):
+	public class Array {
+	    public static void main(String[] args) {
+	       // int[] arr = new int[10];
+	     int[] arr = {1,2,3,4,5,6,7,8,9,10};
+	        System.out.println(arr[1]);
+	        System.out.println(arr[8]);
+	        for(int i = 0; i< arr.length;i++){
+	            System.out.println(arr[i]);
+	            arr[i] = -1;
+	            System.out.println(arr[i]);
+	        }
+10:22:22 From Oleksandr Drahin to Starta Institute 36(Direct Message):
+	int [] arr = new int[10];		for (int i = 0; i < arr.length; i++) {	    arr[i] = i;	}		System.out.println("Элемент второй ячейки: " + arr[1]);	System.out.println("Элемент предпоследней ячейки: " + arr[arr.length-2]);		System.out.print("Массив: ");	for (int i = 0; i < arr.length; i++) {	    System.out.print(arr[i] + " ");	}	System.out.println();		for (int i = 0; i < arr.length; i++) {	    arr[i] = -1;	}		System.out.print("Массив: ");	for (int i = 0; i < arr.length; i++) {	    System.out.print(arr[i] + " ");	}
+10:24:32 From Starta Institute 36 to Everyone:
+	int[] arr;
+	arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	System.out.println(arr[1]);
+	System.out.println(arr[arr.length - 2]);
+	
+	for (int i = 0; i < arr.length; i++) {
+	    System.out.print(arr[i] + " ");
+	}
+	
+	for (int i = 0; i < arr.length; i++) {
+	    arr[i] = -1;
+	}
+	
+	System.out.println();
+	
+	for (int i = 0; i < arr.length; i++) {
+	    System.out.print(arr[i] + " ");
+	}
+10:33:18 From Starta Institute 36 to Everyone:
+	Student[] students = new Student[] {
+	                new Student("Alex"),
+	                new Student("Ivan"),
+	                new Student("Petr")
+	        };
+	//        Student[] students = new Student[3];
+	//        students[0] = new Student("Alex");
+	//        students[1] = new Student("Ivan");
+	//        students[2] = new Student("Petr");
+	
+	        System.out.println("Длина массива: " + students.length);
+	        System.out.println("Студенты:");
+	        for(int i = 0; i < students.length; i++) {
+	            System.out.println(students[i]);
+	        }
+10:33:33 From Starta Institute 36 to Everyone:
+	public class Student {
+	    private String name;
+	
+	    public Student(String name) {
+	        this.name = name;
+	    }
+	
+	    public String getStudentName() {
+	        return this.name;
+	    }
+	
+	    @Override
+	    public String toString() {
+	        return this.name;
+	    }
+	}
+10:46:54 From Starta Institute 36 to Everyone:
+	Создайте класс ручка (Pen)
+	Определите свойство color типа String с доступом private
+	Создайте методы getColor(); setColor(String newColor);
+	Создайте класс Test
+	Создайте три объекта типа Pen
+	Создайте массив L = 3
+	Сохраните все объекты в массив
+	Достаньте поочередно из массива ручки и измените цвет каждой на 
+	“Green”
+	“Red” 
+	“Black”
+10:53:31 From Вадим to Starta Institute 36(Direct Message):
+	Pen pen1 = new Pen();	Pen pen2 = new Pen();	Pen pen3 = new Pen();		// Создание массива и сохранение объектов в массив	Pen[] L = {pen1, pen2, pen3};		// Изменение цвета каждой ручки в массиве	L[0].setColor("Green");	L[1].setColor("Red");	L[2].setColor("Black");		// Вывод цветов ручек для проверки	for (int i = 0; i < L.length; i++) {	    System.out.println("Ручка " + (i + 1) + " цвета: " + L[i].getColor());	}
+10:55:22 From Вадим to Starta Institute 36(Direct Message):
+	Pen[] pens = {pen1, pen2, pen3};
+10:57:44 From Dmytro Korol to Everyone:
+	public static void main(String[] args) {	    Pen pen1 = new Pen("red");	    Pen pen2 = new Pen("green");	    Pen pen3 = new Pen("black");		    Pen[] pens = new Pen[3];		    pens[0] = pen1;	    pens[1] = pen2;	    pens[2] = pen3;	    for (int i = 0; i < pens.length; i++) {	        System.out.println(pens[i].getColor());		    }		}
+10:58:17 From Oleksandr Drahin to Starta Institute 36(Direct Message):
+	Pen[] pens = new Pen[]{	        new Pen("Black"),	        new Pen("Blue"),	        new Pen("Yellow")	};		for (Pen pen: pens){	    System.out.print(pen + " ; ");	}	System.out.println();		pens[0].setColor("Green");	pens[1].setColor("Red");	pens[2].setColor("Black");		System.out.println(Arrays.toString(pens));
+10:58:36 From Anatolii Hololobov to Everyone:
+	Reacted to "public static void m..." with 👍
+11:00:41 From Natalia Kolchenko to Everyone:
+	//Создайте класс ручка (Pen)
+	//        Определите свойство color типа String с доступом private
+	//Создайте методы getColor(); setColor(String newColor);
+	
+	
+	public class Pen {
+	
+	
+	
+	    private String color;
+	
+	    public Pen (String color) {
+	        this.color = color;
+	
+	    }
+	
+	    public String getColor() {
+	        return color;
+	    }
+	
+	    public void setColor(String color) {
+	        this.color = color;
+	    }
+	}
+11:00:49 From Natalia Kolchenko to Everyone:
+	//        Создайте класс Test
+	//        Создайте три объекта типа Pen
+	//        Создайте массив L = 3
+	//        Сохраните все объекты в массив
+	//        Достаньте поочередно из массива ручки и измените цвет каждой на 
+	//        “Green”
+	//        “Red” 
+	//        “Black”
+	
+	public class TestPen {
+	
+	    public static void main(String[] args) {
+	
+	        Pen[] pens = new Pen[] {
+	                new Pen("pink"),
+	                new Pen ("orange"),
+	                new Pen ("blue")
+	        };
+	
+	        System.out.println("Pens:");
+	        for (int i = 0; i < pens.length; i++) {
+	            System.out.println(pens[i].getColor());
+	        }
+	
+	//        Достаньте поочередно из массива ручки и измените цвет каждой
+	        System.out.println();
+	
+	        pens[0].setColor("Green");
+	        pens[1].setColor("Red");
+	        pens[2].setColor("Black");
+	
+	        for (int i = 0; i < pens.length; i++) {
+	            System.out.println(pens[i].getColor());
+	        }
+	
+	
+	    }
+	}
+11:38:30 From Starta Institute 36 to Everyone:
+	int[] arr = {5, 2, 3, 1, 0};
+	//        int[][] matrix = new int[3][3];
+	//
+	//        for (int i = 0; i < matrix.length; i++) {
+	//            for (int j = 0; j < matrix[i].length; j++) {
+	//                matrix[i][j] = (i + 1) * (j + 1);
+	//            }
+	//        }
+	//
+	//        for (int i = 0; i < matrix.length; i++) {
+	//            System.out.println(Arrays.toString(matrix[i]));
+	//        }
+	
+	//        for (int i = 0; i <arr.length ; i++) {
+	//            System.out.print(arr[i] + " ");
+	//        }
+	//        System.out.println();
+	
+	//        System.out.println(Arrays.toString(arr));
+	
+	        int[] arrNew = Arrays.copyOf(arr, 5);
+	
+	//        System.out.println(Arrays.toString(arrNew));
+	
+	//        arrNew[2] = 10;
+	//        arr[0] = 100;
+	
+	//        System.out.println(Arrays.toString(arr));
+	//        System.out.println(Arrays.toString(arrNew));
+	//
+	//        Arrays.sort(arrNew);
+	        System.out.println(Arrays.toString(arr));
+	//        System.out.println(Arrays.toString(arrNew));
+11:40:32 From Starta Institute 36 to Everyone:
+	Создайте массив из всех нечётных чисел от 1 до 99.
+	Выведите его на экран в строку в обратном порядке
+11:46:29 From Вадим to Starta Institute 36(Direct Message):
+	int[] oddNumbers = new int[50];	int oddN = 0;	for (int i = 1; i <= 99; i += 2) {	    oddNumbers[oddN] = i;	    oddN++;	}		// Вывод массива на экран в обратном порядке	System.out.print("Массив нечетных чисел от 1 до 99 в обратном порядке: ");	for (int i = oddNumbers.length - 1; i >= 0; i--) {	    System.out.print(oddNumbers[i] + " ");	}
+11:47:57 From Nina Janeckova to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        int[] arr = new int[99];		        for (int i = 0; i < 99; i++) {	            arr[i]=i+1;	        }	        System.out.print("[");	        for (int i = 98; i >= 0 ; i--) {	            System.out.print(arr[i]);	            if (i!=1)	                System.out.print(",");	        }	        System.out.println("]");		    }
+11:48:33 From Nina Janeckova to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        int[] arr = new int[99];		        for (int i = 0; i < 99; i++) {	            arr[i]=i+1;	        }	        System.out.print("[");	        for (int i = 98; i >= 0 ; i--) {	            System.out.print(arr[i]);	            if (i!=0)	                System.out.print(",");	        }	        System.out.println("]");		    }
+11:50:08 From Юрий (Jurek Grinco) to Everyone:
+	Через continue же можно нечетные только делать?
+11:51:15 From Dmytro Maliarov to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        int count = 0;	        for (int i = 1; i <= 99; i += 2) {	            count++;	        }	        	        int[] oddNumbers = new int[count];	        	        for (int i = 1, j = 0; i <= 99; i += 2) {	            oddNumbers[j++] = i;	        }	        	        for (int i = oddNumbers.length - 1; i >= 0; i--) {	            System.out.print(oddNumbers[i] + " ");	        }	    }	}
+11:53:11 From Nina Janeckova to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        int[] arr = new int[50];	        int oddNum =0;	        for (int i = 0; i < 99; i++) {	            if ((i+1)%2!=0) {	                arr[oddNum] = i + 1;	                oddNum++;	            }	        }	        System.out.print("[");	        for (int i = 49; i >= 0 ; i--) {	            System.out.print(arr[i]);	            if (i!=0)	                System.out.print(",");	        }	        System.out.println("]");		    }
+11:56:55 From Вадим to Everyone:
+	// Создание массива нечетных чисел от 1 до 99	    int[] oddNumbers = new int[50];	    int oddN = 0;	    for (int i = 1; i <= 99; i += 2) {	        oddNumbers[oddN] = i;	        oddN++;	    }		    // Вывод массива на экран в обратном порядке	    System.out.print("Массив нечетных чисел от 1 до 99 в обратном порядке: ");	    for (int i = oddNumbers.length -1; i >= 0; i--) {	        if (i > 0) {	            System.out.print(oddNumbers[i] + ", ");	        }else System.out.print(oddNumbers[0]);	    }	}
+12:00:09 From Nina Janeckova to Everyone:
+	public static void main(String[] args) {	        int[] arr = new int[50];	        int oddNum =0;	        for (int i = 1; i < 100; i++) {	            if ( i % 2 != 0) {	                arr[oddNum] = i;	                oddNum++;	            }	        }	        System.out.print("[");	        for (int i = arr.length - 1; i >= 0 ; i--) {	            System.out.print(arr[i]);	            if (i!=0)	                System.out.print(",");	        }	        System.out.println("]");		    }
+12:00:38 From Starta Institute 36 to Everyone:
+	Создайте массив из 15 случайных целых чисел из отрезка [0;9]. 
+	Подсчитайте сколько в массиве чётных элементов и выведете это количество на экран на отдельной строке.
+12:07:21 From Nina Janeckova to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        int[] arr = new int[15];		        for (int i = 0; i < arr.length ; i++) {	            arr[i] = (int) (Math.random() * (10));	        }	        System.out.println(Arrays.toString(arr));	        int evenNum = 0;		        for (int i = 0; i < arr.length; i++) {	            if ( arr[i] % 2 == 0)	                evenNum++;	        }	        System.out.println(evenNum + " evens numbers in massive");	    }
+12:07:42 From Dmytro Korol to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {			    Random random = new Random();	    int[] numbers = new int[15];	    int countEven = 0;		    for (int i = 0; i < numbers.length; i++) {	        numbers[i] = random.nextInt(10);	        if (numbers[i] % 2 == 0) {	            countEven++;	        }	    }		    System.out.println("массив:");	    for (int number : numbers) {	        System.out.print(number + " ");	    }	    System.out.println();			    System.out.println("Количество четных чисел: " + countEven);	}
+12:08:10 From Oleksandr Drahin to Starta Institute 36(Direct Message):
+	int[] arrRnd = new int[15];	for (int i = 0; i < arrRnd.length; i++) {	    arrRnd[i] = (int)(Math.random() * 15);	}	System.out.print("Массив случайных чисел до 15: ");	int countEven = 0;	for (int el: arrRnd){	    System.out.print(el + " ");	    if (el % 2 == 0) countEven++;	}	System.out.println();	System.out.println("Четных чисел в массиве: " + countEven);
+12:08:24 From Вадим to Starta Institute 36(Direct Message):
+	int evenCount = 0;	// Этот цикл for-each	for (int number : numbers) {	    if (number % 2 == 0) {	        evenCount++;	    }
+12:09:16 From Oleksandr Drahin to Starta Institute 36(Direct Message):
+	только до 15, а не до 9 взял :)
+12:09:31 From Вадим to Starta Institute 36(Direct Message):
+	int[] numbers = new int[15];	for (int i = 0; i < numbers.length; i++) {	    numbers[i] = random.nextInt(10);}
+12:11:55 From Вадим to Everyone:
+	// Создание генератора случайных чисел	Random random = new Random();		// Создание массива из 15 случайных целых чисел в диапазоне [0; 9]	int[] numbers = new int[15];	for (int i = 0; i < numbers.length; i++) {	    numbers[i] = random.nextInt(10); // Генерация случайного числа от 0 до 9	}		// Подсчет количества четных элементов в массиве	int evenCount = 0;	// Этот цикл for-each	for (int number : numbers) {	    if (number % 2 == 0) {	        evenCount++;	    }
+12:12:36 From Starta Institute 36 to Everyone:
+	Создать массив типа String с размером 7. 
+	Записать в него значения дней недели.
+	Вывести на консоль значение последнего элемента.
+12:14:56 From Вадим to Everyone:
+	+
+12:17:28 From Dmytro Maliarov to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        	        String[] daysOfWeek = new String[7];	        	        daysOfWeek[0] = "Понедельник";	        daysOfWeek[1] = "Вторник";	        daysOfWeek[2] = "Среда";	        daysOfWeek[3] = "Четверг";	        daysOfWeek[4] = "Пятница";	        daysOfWeek[5] = "Суббота";	        daysOfWeek[6] = "Воскресенье";	        	        System.out.println(daysOfWeek[6]);	    }	}
+12:18:57 From Nina Janeckova to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        String[] arr = {"Monday", "Tuesday", "Wednesday", "Thursday","Friday","Saturday","Sunday"};		        System.out.println(arr[arr.length-1]);	    }
+12:19:38 From Natalia Kolchenko to Starta Institute 36(Direct Message):
+	Я сделала так заполнение, но не пойму как вывести
+12:22:25 From Dmytro Korol to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	    String[] days = {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};		    System.out.println(days[6]);	}
+12:24:31 From Вадим to Everyone:
+	//создание массива	    String[] dayOfWeek = new String[7];	    //заполнение массива	    dayOfWeek[0] = "Понедельник";	    dayOfWeek[1] = "Вторник";	    dayOfWeek[2] = "Среда";	    dayOfWeek[3] = "Четверг";	    dayOfWeek[4] = "Пятница";	    dayOfWeek[5] = "Суббота";	    dayOfWeek[6] = "Восскресенье";	    //вывод в косоль	    System.out.println("последний элемент в массиве: " + dayOfWeek[dayOfWeek.length -1]);		}
+12:25:41 From Starta Institute 36 to Everyone:
+	Создать массив из 15 случайных элементов
+	В массиве найти максимальный элемент
+	
+	В массиве найти максимальный элемент с четным индексом
+12:37:56 From Nina Janeckova to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        int[] arr = new int[15];	        Random random = new Random();	        int min = -100, max = 100;		        arr[0] = (int) (Math.random() * (max - min + 1) + min - 1);	        int maxEl = arr[0];	        int maxElWithEvenIndex = arr[0];		        for (int i = 1; i < arr.length ; i++) {	            arr[i] = (int) (Math.random() * (max - min + 1) + min - 1);	            maxEl = maxEl>arr[i]?maxEl:arr[i];	            if (i %2 == 0)	            {	                maxElWithEvenIndex = maxElWithEvenIndex>arr[i]?maxElWithEvenIndex:arr[i];	            }	        }	        System.out.println(Arrays.toString(arr));		        System.out.println("Max Element is " + maxEl);	        System.out.println("Max Element with Even Index is " + maxElWithEvenIndex);	    }
+12:40:16 From Natalia Kolchenko to Everyone:
+	import java.util.Arrays;
+	
+	public class RandomMaxItemInArray {
+	
+	    public static void main(String[] args) {
+	        int min = 0;
+	        int max = 100;
+	        int randomNumber;
+	        int maxNumber = 0;
+	        int maxEvenNumber = 0;
+	
+	        int[] randomArr = new int[15];
+	
+	        for (int i = 0; i < randomArr.length; i++) {
+	            randomNumber = (int)(Math.random()*(max - min + 1)+min);
+	            randomArr[i] = randomNumber;
+	            if (randomArr[i] > maxNumber) {
+	                maxNumber = randomArr[i];
+	            }
+	            if ((i % 2 ==0) && (randomArr[i] > maxEvenNumber)) {
+	                    maxEvenNumber = randomArr[i];
+	            }
+	        }
+	        System.out.println(Arrays.toString(randomArr));
+	        System.out.println("Max number:" + maxNumber);
+	        System.out.println("Max even: " + maxEvenNumber);
+	    }
+	}
