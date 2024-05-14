@@ -1,404 +1,194 @@
-09:40:08 From Starta Institute 36 to Everyone:
-	int [][] arr = new int[3][3];
-	        for (int i = 0; i < arr.length; i++) {
-	            for (int j = 0; j < arr[i].length; j++) {
-	                arr[i][j] = (i + 1) * (j + 1);
-	            }
-	        }
-	
-	        for (int i = 0; i < arr.length; i++) {
-	            for (int j = 0; j < arr[i].length; j++) {
-	                System.out.print(arr[i][j] + " ");
-	            }
-	            System.out.println();
-	        }
-	//        for (int i = 0; i < arr.length; i++) {
-	//            System.out.println(Arrays.toString(arr[i]));
-	//        }
-09:46:22 From Starta Institute 36 to Everyone:
-	int [][][] arr = new int[8][5][3];
-	for (int i = 0; i < arr.length; i++) {
-	    for (int j = 0; j < arr[i].length; j++) {
-	        for (int k = 0; k < arr[i][j].length; k++) {
-	            arr[i][j][k] = (i + 1) * (j + 1) * (k + 1);
-	        }
-	    }
+09:38:16 From Starta Institute 36 to Everyone:
+	Напишите метод, который принимает две строки в аргументах, соединяет их и определяет реверсивный порядок, выведите результат на консоль.
+	concatReversStr(String str1, String str2)
+09:45:39 From Alina Miroshkina to Starta Institute 36(Direct Message):
+	public class Main {		    public static void main(String[] args) {	        String str1 = "Hello";	        String str2 = "world!";	        	        concatReversStr(str1, str2);	    }		    public static void concatReversStr(String str1, String str2) {	                String combinedString = str1 + str2;		              StringBuilder reversedString = new StringBuilder(combinedString);	        reversedString.reverse();		  	        System.out.println("Результат: " + reversedString);	    }	}
+09:45:49 From Oleksandr Drahin to Starta Institute 36(Direct Message):
+	public static String concatReversStr(String str1, String str2){	    StringBuilder sb = new StringBuilder(str1 + str2);	    sb.reverse();	    return sb.toString();	}
+09:46:55 From Starta Institute 36 to Everyone:
+	public static String concatReversStr(String str1, String str2) {
+	    StringBuilder str = new StringBuilder();
+	    str.append(str1);
+	    str.append(str2);
+	    str.reverse();
+	    return str.toString();
 	}
+09:47:24 From Starta Institute 36 to Everyone:
+	Дан массив символов, объедините его и замените символ '?' на правильный символ, выведите результат на консоль.
+	char[] arr = {'I', ' ', 'l', 'i', 'k', '?', ' ', 'J', 'a', 'v', 'a'};
+09:52:50 From Oleksandr Drahin to Starta Institute 36(Direct Message):
+	char[] arr = {'I', ' ', 'l', 'i', 'k', '?', ' ', 'J', 'a', 'v', 'a'};	StringBuilder sb = new StringBuilder();	sb.append(arr);	sb.replace(sb.indexOf("?"), sb.indexOf("?") + 1,"e");	System.out.println(sb);
+09:56:56 From Oleksandr Drahin to Everyone:
+	char[] arr = {'I', ' ', 'l', 'i', 'k', '?', ' ', 'J', 'a', 'v', 'a'};	StringBuilder sb = new StringBuilder();	sb.append(arr);	sb.replace(sb.indexOf("?"), sb.indexOf("?") + 1,"e");	System.out.println(sb);
+10:06:33 From Starta Institute 36 to Everyone:
+	StringBuilder query = new StringBuilder("SELECT c.brand, c.model, c.color, c.price FROM car c WHERE ");
+	String parameter = "model";
+	String value = "X6";
+	query.append(parameter);
+	query.append(" = ");
+	query.append("\'" + value + "\'");
 	
-	for (int i = 0; i < arr.length; i++) {
-	    for (int j = 0; j < arr[i].length; j++) {
-	        for (int k = 0; k < arr[i][j].length; k++) {
-	            System.out.print(arr[i][j][k] + " ");
-	        }
-	        System.out.println();
-	    }
-	    System.out.println();
-	}
-09:58:50 From Natalia Kolchenko to Starta Institute 36(Direct Message):
-	Не уверена, что верно
-10:04:24 From Starta Institute 36 to Everyone:
-	public static int linearSearch(int[] arr, int num) {
-	    for (int i = 0; i < arr.length; i++) {
-	        if (arr[i] == num) {
-	            return i;
-	        }
-	    }
-	    return -1;
-	}
-10:04:31 From Starta Institute 36 to Everyone:
-	public static void main(String[] args) {
-	    int num = 10;
-	    int[] arr = {3, 5, 10, 1, 0, 22, 50};
-	    System.out.println(linearSearch(arr, num));
-	}
-10:16:39 From Starta Institute 36 to Everyone:
-	//       1) [0, 1, 3, 5, 10, 22, 50]
-	//        indx = arr.length / 2 = 3
-	//        num == arrr[indx]
-	//        2) [0, 1, 3] [5] [10, 22, 50]
-	//        3) [10, 22, 50] => indx = 1
-	//        4) [10] [22] [50]
-	//        indx = 4
-10:31:14 From Starta Institute 36 to Everyone:
-	public static int binarySearch(int[] arr, int num) {
-	    int firstIdx = 0;
-	    int lastIdx = arr.length - 1;
-	
-	    while(firstIdx <= lastIdx) {
-	        int midIdx = (lastIdx - firstIdx) / 2;
-	        if (arr[midIdx] == num) {
-	            return midIdx;
-	        } else if (arr[midIdx] < num) {
-	            firstIdx = midIdx + 1;
-	        } else if (arr[midIdx] > num) {
-	            lastIdx = midIdx - 1;
-	        }
-	    }
-	
-	    return -1;
-	}
-10:38:23 From Starta Institute 36 to Everyone:
-	public static int binarySearch(int[] arr, int num) {
-	    int firstIdx = 0;
-	    int lastIdx = arr.length - 1;
-	
-	    while(firstIdx <= lastIdx) {
-	        int midIdx = (lastIdx + firstIdx) / 2;
-	        if (arr[midIdx] == num) {
-	            return midIdx;
-	        } else if (arr[midIdx] < num) {
-	            firstIdx = midIdx + 1;
-	        } else if (arr[midIdx] > num) {
-	            lastIdx = midIdx - 1;
-	        }
-	    }
-	
-	    return -1;
-	}
-10:46:52 From Starta Institute 36 to Everyone:
-	https://proglib.io/p/6-search-algorithms-java
-10:52:06 From Starta Institute 36 to Everyone:
-	https://habr.com/ru/articles/782608/
-11:26:10 From Starta Institute 36 to Everyone:
-	public static int[] bubbleSort(int[] arr) {
-	    boolean isSorted = false;
-	    int temp;
-	    while (!isSorted) {
-	        isSorted = true;
-	        for (int i = 0; i < arr.length - 1; i++) {
-	            if (arr[i] > arr[i + 1]) {
-	                temp = arr[i];
-	                arr[i] = arr[i + 1];
-	                arr[i + 1] = temp;
-	                isSorted = false;
-	            }
-	        }
-	    }
-	    return arr;
-	}
-11:26:17 From Starta Institute 36 to Everyone:
-	public static void main(String[] args) {
-	    int[] arr = {3, 5, 10, 1, 0, 22, 50};
-	    System.out.println(Arrays.toString(arr));
-	    System.out.println(Arrays.toString(bubbleSort(arr)));
-	}
-11:29:07 From Starta Institute 36 to Everyone:
-	https://proglib.io/p/java-sorting-algorithms
-11:53:50 From Starta Institute 36 to Everyone:
-	static int partition(int[] array, int begin, int end) {
-	    int pivot = end;
-	
-	    int counter = begin;
-	    for (int i = begin; i < end; i++) {
-	        if (array[i] < array[pivot]) {
-	            int temp = array[counter];
-	            array[counter] = array[i];
-	            array[i] = temp;
-	            counter++;
-	        }
-	    }
-	    int temp = array[pivot];
-	    array[pivot] = array[counter];
-	    array[counter] = temp;
-	
-	    return counter;
-	}
-	
-	public static void quickSort(int[] array, int begin, int end) {
-	    if (end <= begin) return;
-	    int pivot = partition(array, begin, end);
-	    quickSort(array, begin, pivot-1);
-	    quickSort(array, pivot+1, end);
-	}
-11:54:05 From Starta Institute 36 to Everyone:
-	public static void main(String[] args) {
-	    int[] arr = {3, 5, 10, 1, 0, 22, 50};
-	    System.out.println(Arrays.toString(arr));
-	    quickSort(arr, 0, arr.length - 1);
-	    System.out.println(Arrays.toString(arr));
-	}
-11:55:53 From Starta Institute 36 to Everyone:
-	Создайте 5 объектов типа Car
-	Объект Car должен содержать поля
-	private double price;
-	private String model;
-	и конструктор с этими полями
-	Сохраните объекты в массив
-	Распечатайте результат
-	Результат печати одного авто должен выглядеть: 
-	Car - BMW, price = 2.3
-	Применив метод “сортировка пузырьком” отсортируйте массив по стоимости
-	Распечатайте результат
-	Применив метод “сортировка пузырьком” отсортируйте массив по модели (первая буква из модели)
-	Распечатайте результат
-12:15:20 From Nina Janeckova to Starta Institute 36(Direct Message):
-	public class Car {	    private double price;	    private String model;		    public Car(String model, double price) {	        this.price = price;	        this.model = model;	    }		    public Car() {	        this.price = 0;	        this.model = "";	    }		    public void printCar(){	        System.out.println("Car - " + this.model + ", price = " + this.price);	    }	    public double getPrice(){	        return this.price;	    }	    public String getModel(){	        return this.model;	    }		}
-12:15:55 From Nina Janeckova to Starta Institute 36(Direct Message):
-	Car[] arrCars = new Car[5];	        arrCars[0] = new Car("BMW", 45000);	        arrCars[1] = new Car("Opel", 12400);	        arrCars[2] = new Car("Mercedes", 38000);	        arrCars[3] = new Car("Citroen", 28000);	        arrCars[4] = new Car("Ford", 32000);		        for (int i = 0; i < arrCars.length; i++) {	            arrCars[i].printCar();	        }
-12:16:09 From Nina Janeckova to Starta Institute 36(Direct Message):
-	//        Применив метод “сортировка пузырьком” отсортируйте массив по стоимости	        System.out.println();	        boolean isSorted = false;	        Car temp = new Car();	        while (!isSorted) {	            isSorted = true;	            for (int i = 0; i < arrCars.length - 1; i++) {	                if (arrCars[i].getPrice() > arrCars[i + 1].getPrice()) {	                    temp = arrCars[i];	                    arrCars[i] = arrCars[i + 1];	                    arrCars[i + 1] = temp;	                    isSorted = false;	                }	            }	        }	        for (int i = 0; i < arrCars.length; i++) {	            arrCars[i].printCar();	        }
-12:16:18 From Nina Janeckova to Starta Institute 36(Direct Message):
-	//        Применив метод “сортировка пузырьком” отсортируйте массив по модели (первая буква из модели)	       isSorted = false;	        while (!isSorted) {	            isSorted = true;	            for (int i = 0; i < arrCars.length - 1; i++) {	                if (arrCars[i].getModel().charAt(0) > arrCars[i + 1].getModel().charAt(0)) {	                    temp = arrCars[i];	                    arrCars[i] = arrCars[i + 1];	                    arrCars[i + 1] = temp;	                    isSorted = false;	                }	            }	        }	        for (int i = 0; i < arrCars.length; i++) {	            arrCars[i].printCar();	        }
-12:17:20 From Oleksandr Drahin to Starta Institute 36(Direct Message):
-	сортировка по цене:	public static void sortPriceCars(Car[] array){	    boolean isSorted = false;	    for (int i = 0; i < array.length - 1 && !isSorted; i++) {	        isSorted = true;	        for (int j = 0; j < array.length - 1 - i; j++) {	            if (array[j].getPrice() > array[j + 1].getPrice()) {	                Car temp = array[j];	                array[j] = array[j + 1];	                array[j + 1] = temp;	                isSorted = false;	            }	        }	    }	}
-12:20:17 From Вадим to Everyone:
-	@Override	    public String toString() {	    return "Car - " + model + ", price = " + price;
-12:23:20 From Oleksandr Drahin to Starta Institute 36(Direct Message):
-	по модели:	public static void sortModelCars(Car[] array){	    boolean isSorted = false;	    for (int i = 0; i < array.length - 1 && !isSorted; i++) {	        isSorted = true;	        for (int j = 0; j < array.length - 1 - i; j++) {	            if (array[j].getModel().compareTo(array[j + 1].getModel()) > 0) {	                Car temp = array[j];	                array[j] = array[j + 1];	                array[j + 1] = temp;	                isSorted = false;	            }	        }	    }	}
-12:28:31 From Natalia Kolchenko to Everyone:
-	//Создайте 5 объектов типа Car
-	//        Объект Car должен содержать поля
-	//private double price;
-	//private String model;
-	//        и конструктор с этими полями
-	
-	
-	
-	public class Car {
-	    private double price;
-	    private String model;
-	
-	    public Car (double price, String model) {
-	        this.price = price;
-	        this.model = model;
-	    }
-	
-	    @Override
-	    public String toString () {
-	        return this.model + " " + this.price;
-	    }
-	
-	    public double getPrice() {
-	        return price;
-	    }
-	
-	    public String getModel() {
-	        return model;
-	    }
-	}
-12:29:03 From Natalia Kolchenko to Everyone:
-	public static void main(String[] args) {
-	    Car [] cars = new Car[] {
-	            new Car(1.5, "bwm 530i"),
-	            new Car (21, "volvo s80"),
-	            new Car (10, "ford focus"),
-	            new Car (5.7, "app mustang")
-	    };
-	
-	    for (int i = 0; i < cars.length; i++) {
-	        System.out.println(cars[i]);
-	
-	    }
-	
-	    System.out.println();
-	    System.out.println(Arrays.toString(bubbleSortCarsByPrice(cars)));
-	    System.out.println();
-	    System.out.println(Arrays.toString(bubbleSortCarsByModel(cars)));
-	
-	
-	
-	}
-12:29:08 From Starta Institute 36 to Everyone:
-	Создайте массив из всех чётных чисел от 2 до 20 и выведите элементы массива на экран сначала в строку, отделяя один элемент от другого пробелом, а затем в столбик (отделяя один элемент от другого началом новой строки). Перед созданием массива подумайте, какого он будет размера.
-12:29:09 From Natalia Kolchenko to Everyone:
-	public static Car[]  bubbleSortCarsByPrice (Car[] arr) {
-	    boolean isSorted = false;
-	    Car temp;
-	
-	    while (!isSorted) {
-	        isSorted = true;
-	        for (int i = 0; i < arr.length-1; i++){
-	            if (arr[i].getPrice() > arr[i+1].getPrice()){
-	                temp = arr[i];
-	                arr[i] = arr[i+1];
-	                arr[i+1] = temp;
-	                isSorted = false;
-	            }
-	        }
-	    }
-	    return arr;
-	}
-12:29:14 From Natalia Kolchenko to Everyone:
-	public static Car[]  bubbleSortCarsByModel (Car[] arr) {
-	    boolean isSorted = false;
-	    Car temp;
-	
-	    while (!isSorted) {
-	        isSorted = true;
-	        for (int i = 0; i < arr.length-1; i++){
-	            if (arr[i].getModel().charAt(0) > arr[i+1].getModel().charAt(0)){
-	                temp = arr[i];
-	                arr[i] = arr[i+1];
-	                arr[i+1] = temp;
-	                isSorted = false;
-	            }
-	        }
-	    }
-	    return arr;
-	}
-12:29:20 From Starta Institute 36 to Everyone:
-	Создайте массив из всех чётных чисел от 2 до 20 и выведите элементы массива на экран сначала в строку, отделяя один элемент от другого пробелом, а затем в столбик (отделяя один элемент от другого началом новой строки). Перед созданием массива подумайте, какого он будет размера.
-12:31:43 From Starta Institute 36 to Everyone:
-	При выводе чисел в столбик, вывести их в обратном порядке.
-12:37:08 From Oleksandr Drahin to Starta Institute 36(Direct Message):
-	int[] array = new int[10];		for (int i = 1; i <= array.length; i++) {	    array[i - 1] = i * 2;	}		for (int elem: array){	    System.out.print(elem + " ");	}		for (int elem: array){	    System.out.println(elem);	}
-12:37:10 From Nina Janeckova to Starta Institute 36(Direct Message):
-	int[] arr = new int[10];	        int j = 2;	        for (int i = 0; i < arr.length; i++) {	            arr[i] = j;	            j += 2;	        }		        for (int i = 0; i < arr.length; i++) {	            System.out.print(arr[i] + " ");	        }	        System.out.println();	        System.out.println();		        for (int i = arr.length-1; i >= 0; i--) {	            System.out.println(arr[i]);	        }
-12:41:27 From Вадим to Starta Institute 36(Direct Message):
-	// Создаем массив четных чисел от 2 до 20	int[] evenNumbers = new int[10];	int num = 2;	for (int i = 0; i < evenNumbers.length; i++) {	    evenNumbers[i] = num;	    num += 2;	}		// Выводим элементы массива в строку	System.out.print("Элементы массива в строку: ");	for (int i = 0; i < evenNumbers.length; i++) {	    System.out.print(evenNumbers[i]);	    if (i < evenNumbers.length - 1) {	        System.out.print(" ");	    }	}		// Выводим элементы массива в столбик	System.out.println("\nЭлементы массива в столбикв обратном порядке:");	for (int i = evenNumbers.length - 1; i >= 0; i--) {	    System.out.println(evenNumbers[i]);	}
-12:44:01 From Natalia Kolchenko to Everyone:
-	public class EvenArray {
-	
+	System.out.println(query);
+10:22:20 From Starta Institute 36 to Everyone:
+	<dependencies>
+	    <dependency>
+	        <groupId>org.junit.jupiter</groupId>
+	        <artifactId>junit-jupiter</artifactId>
+	        <version>5.9.2</version>
+	        <scope>test</scope>
+	    </dependency>
+	</dependencies>
+10:27:37 From Nina Janeckova to Everyone:
+	Unresolved plugin: 'org.apache.maven.plugins:maven-clean-plugin:3.2.0'
+10:27:45 From Natalia Kolchenko to Everyone:
+	+
+10:28:09 From Alina Miroshkina to Starta Institute 36(Direct Message):
+	+
+10:39:46 From Dmytro Korol to Everyone:
+	Windows рулит
+10:41:23 From Anatolii Hololobov to Everyone:
+	+
+10:41:34 From Oleksandr Drahin to Everyone:
+	+
+10:41:36 From Eduard Bandurivskyi to Everyone:
+	+
+10:41:37 From Inna Degtiarova to Everyone:
+	+
+11:03:12 From Natalia Kolchenko to Everyone:
+	public class Main {
 	    public static void main(String[] args) {
-	        int [] evenArr = new int [10];
-	        int j = 0;
-	        for (int i = 2; i <= 20; i+=2){
-	            evenArr[j] = i;
-	            System.out.print(evenArr[j] + " ") ;
-	            j++;
 	
-	        }
-	
-	        System.out.println();
-	
-	        for (int i = evenArr.length -1; i >= 0; i-=1) {
-	
-	            System.out.println(evenArr[i]);
-	        }
+	        System.out.println(Arrays.toString(getNumbers()));
 	
 	
+	    }
+	
+	    public static int[] getNumbers(){
+	        int[] arr = {1,2,3};
+	        return arr;
 	    }
 	}
-13:07:58 From Starta Institute 36 to Everyone:
-	Создайте строку как литерал: str1 = “Java”
-	Создайте строку как литерал: str2 = “Java”
-	Создайте строку как Объект: str 3 = new (“Java”)
-	Создайте строку как Объект: str 4 = new (“Java”)
-	Сравните строки 1 и 2 используя == 
-	Сравните строки 1 и 2 используя equals
-	Сравните строки 3 и 4 используя == 
-	Сравните строки 3 и 4 используя equals
-	Сравните строки 1 и 3 используя == 
-	Сравните строки 1 и 3 используя equals
-	Проанализируйте результат
-13:11:40 From Dmytro Korol to Starta Institute 36(Direct Message):
-	String str1 = "Java";	String str2 = "Java";	String str3 = new String("Java");	String str4= new String("Java");	System.out.println(str1==str2);	System.out.println(str3==str4);	System.out.println(str1==str3);	System.out.println(str1.equals(str2));	System.out.println(str3.equals(str4));	System.out.println(str1.equals(str3));
-13:12:12 From Oleksandr Drahin to Starta Institute 36(Direct Message):
-	String str1 = "Java";	String str2 = "Java";	String str3 = new String("Java");	String str4 = new String("Java");		System.out.println(str1 == str2);	System.out.println(str1.equals(str2));	System.out.println(str3 == str4);	System.out.println(str3.equals(str4));	System.out.println(str1 == str3);	System.out.println(str1.equals(str3));
-13:14:14 From Dmytro Maliarov to Starta Institute 36(Direct Message):
-	public class Main {	        public static void main(String[] args) {	            	            String str1 = "Java";	            String str2 = "Java";	            	            String str3 = new String("Java");	            String str4 = new String("Java");	            	            System.out.println("str1 == str2: " + (str1 == str2)); // true	            	            System.out.println("str1.equals(str2): " + str1.equals(str2)); // true	            	            System.out.println("str3 == str4: " + (str3 == str4)); // false	            	            System.out.println("str3.equals(str4): " + str3.equals(str4)); // true	            	            System.out.println("str1 == str3: " + (str1 == str3)); // false		                       System.out.println("str1.equals(str3): " + str1.equals(str3)); // true	        }	    }
-13:20:02 From Starta Institute 36 to Everyone:
-	public static void main(String[] args) {
-	        String str1 = "Java";
-	        String str2 = "Java";
-	        String str3 = new String("Java");
-	        String str4 = new String("Java");
-	//        str3 = str3.intern();
-	
-	        System.out.println(str1 == str2);
-	        System.out.println(str3 == str4);
-	        System.out.println(str1 == str4);
-	        System.out.println(str1 == str3);
-	        System.out.println();
-	
-	        System.out.println(str1.equals(str2));
-	        System.out.println(str3.equals(str4));
-	        System.out.println(str1.equals(str4));
-	        System.out.println(str1.equals(str3));
-	
+11:03:21 From Natalia Kolchenko to Everyone:
+	@Test
+	void getNumbersAssertEquals() {
+	    int[] arr = {1,2,3};
+	    assertEquals(arr, getNumbers());
+	}
+11:43:01 From Starta Institute 36 to Everyone:
+	@BeforeAll
+	    static void initBeforeAll() {
+	        System.out.println("Befor");
 	    }
-13:34:59 From Starta Institute 36 to Everyone:
-	Создайте StringBuilder объекты используя все предоставленные конструкторы
-	Используя метод append добавьте к объекту, который создан при помощи конструктора без параметров, строку “StartaUniversity”
-	Распечатайте все объекты на консоле
-	Примените метод reverse() к любому созданному объекту
-	Распечатайте объект на консоле
-13:39:52 From Dmytro Korol to Starta Institute 36(Direct Message):
-	StringBuilder sb1 = new StringBuilder();	        StringBuilder sb2 = new StringBuilder("Hello");	        StringBuilder sb3 = new StringBuilder(10);		        sb1.append("StartaUniversity");		        System.out.println("sb1: " + sb1);	        System.out.println("sb2: " + sb2);	        System.out.println("sb3: " + sb3);		        sb2.reverse();		        System.out.println("sb2 после применения метода reverse(): " + sb2);
-14:16:22 From Starta Institute 36 to Everyone:
-	StringBuilder sb1 = new StringBuilder();
-	        StringBuilder sb2 = new StringBuilder(100);
-	        String str = "Java";
-	        StringBuilder sb3 = new StringBuilder(str);
-	        StringBuilder sb4 = new StringBuilder("qwertdfgds sdgfsdgfs000");
 	
-	//        System.out.println(sb1 + " " + sb1.capacity() + " " + sb1.length());
-	
-	//        sb1.append("StartaUniversity");
-	//        System.out.println(sb1 + " " + sb1.capacity() + " " + sb1.length());
-	//        System.out.println(sb2 + " " + sb2.capacity() + " " + sb2.length());
-	//        System.out.println(sb3 + " " + sb3.capacity() + " " + sb3.length());
-	//        System.out.println(sb4 + " " + sb4.capacity() + " " + sb4.length());
-14:16:29 From Starta Institute 36 to Everyone:
-	//        sb1.reverse();
-	//        System.out.println(sb1 + " " + sb1.capacity() + " " + sb1.length());
-	//        System.out.println(sb1.charAt(0));
-	        System.out.println(sb1.delete(0, 6));
-	//        System.out.println(sb1.deleteCharAt(0));
-	        System.out.println(sb1.substring(6));
-	//        System.out.println(sb1.replace(0, 6, "Java"));
-	        StringBuilder sb5 = new StringBuilder("Java StringBuilder");
-	        System.out.println(sb5 + " " + sb5.capacity() + " " + sb5.length());
-	        sb5.trimToSize();
-	        System.out.println(sb5 + " " + sb5.capacity() + " " + sb5.length());
-14:25:02 From Starta Institute 36 to Everyone:
-	Создайте объект StringBuffer используя конструктор String
-	"It is String Builder Object"
-	Распечатайте объект
-	Замените слово Builder на слово Buffer 
-	Используйте метод replace()
-	Распечатайте результат
-14:30:58 From Natalia Kolchenko to Everyone:
-	public class Task2 {
-	
-	    public static void main(String[] args) {
-	        String  str = "It is String Builder Object";
-	        StringBuffer sb1 = new StringBuffer(str);
-	//        StringBuffer str4 = new StringBuffer("Hello");
-	//        StringBuffer str3 = new StringBuffer(10);
-	
-	        System.out.println(sb1);
-	        sb1.replace(13,19, "Buffer");
-	        System.out.println(sb1);
+	    @AfterAll
+	    static void initAfterAll() {
+	        System.out.println("After");
 	    }
+	
+	    @BeforeEach
+	    void initBeforeEach() {
+	        System.out.println("Before Each");
+	    }
+	
+	    @AfterEach
+	    void initAfterEach() {
+	        System.out.println("After Each");
+	    }
+	
+	    @Test
+	    void getNumbersAssertNotEqualsTest() {
+	        int[] arr = {1, 2, 3};
+	        assertNotEquals(arr, getNumbers());
+	    }
+	
+	    @Test
+	    void getNumbersAssertArrayEqualsTest() {
+	        int[] arr = {1, 2, 3};
+	        assertArrayEquals(arr, getNumbers());
+	    }
+	
+	//    @Test
+	//    void getNumbersCheckNullTest() {
+	//        int[] arr = null;
+	//        assertNull(arr);
+	//    }
+	
+	    @Test
+	    void getNumbersCheckNotNullTest() {
+	        assertNotNull(getNumbers());
+	    }
+11:55:19 From Starta Institute 36 to Everyone:
+	Написать метод findMax(), который возвращает максимальное число из массива
+	Протестировать с помощью метода main()
+	Написать тесты используя библиотеку JUnit
+	тест, который проверяет пустой массив или нет
+	тест, который проверяет правильность поиска максимального значения
+12:27:26 From Starta Institute 36 to Everyone:
+	@Test
+	void findMaxNotEmptyResultTest() {
+	    int[] arr = {0, -5, 7};
+	    assertNotNull(findMax(arr));
+	}
+	
+	@Test
+	void findMaxExpectResultTest() {
+	    int[] arr = {0, -5, 7};
+	    int max = 7;
+	    assertEquals(max, findMax(arr));
+	}
+	
+	@Test
+	void findMaxNotEmptyArrayTest() {
+	    assertNotNull(new int[]{0, -5, 7});
+	}
+	
+	@Test
+	void findMaxEmptyArrayTest() {
+	    int [] arr = null;
+	    assertNull(arr);
+	}
+12:33:49 From Natalia Kolchenko to Everyone:
+	@Test
+	    void findMaxEmptyArrayTest() {
+	        int[] arr = null;
+	//        assertEquals(null,findMax(arr)); //либо/либо
+	        assertNull(findMax(arr));
+	    }
+12:34:22 From Starta Institute 36 to Everyone:
+	Проверка номера банковского счета
+	Создайте метод isValidAccountNumber(String accountNumber),который возвращает true в случае успешной проверки.
+	БС может содержать только 14 цифр
+	Все 14 цифр не могут быть нулями
+	Номер счета не может быть null или пустым.
+	Проверьте с помощью метода main()
+	Напишите тесты используя библиотеку JUnit
+12:41:50 From Starta Institute 36 to Everyone:
+	public static boolean isValidAccountNumber(String accountNumber) {
+	    if (accountNumber == null || accountNumber.equalsIgnoreCase("")) {
+	        return false;
+	    }
+	    if (accountNumber.length() == 14) {
+	        int count = 0;
+	        for (int i = 0; i < accountNumber.length(); i++) {
+	            if (!Character.isDigit(accountNumber.charAt(i))) {
+	                return false;
+	            }
+	            if (accountNumber.charAt(i) == '0') {
+	                count += 1;
+	            }
+	        }
+	        return count != 14;
+	    } else {
+	        return false;
+	    }
+	}
+12:47:41 From Starta Institute 36 to Everyone:
+	@Test
+	void isValidAccountNumberNullTest() {
+	    assertFalse(isValidAccountNumber(null));
+	}
+	
+	@Test
+	void isValidAccountNumberNotNullTest() {
+	    assertTrue(isValidAccountNumber("01234567890000"));
 	}
